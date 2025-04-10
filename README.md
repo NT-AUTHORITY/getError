@@ -19,7 +19,7 @@
  {"status":1,"main":{"category":"NTSTATUS","code":"0x00000000","msg":"The operation completed successfully."},"ex":null}
 ```
 ### Error
-```
+```bash
  PS D:\getError> .\getError.exe 0xFFFFFFF NTSTATUS en_US
  {"status":0,"main":null,"ex":"Error description not found."}
 ```
