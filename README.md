@@ -23,3 +23,12 @@
  PS D:\getError> .\getError.exe 0xFFFFFFF NTSTATUS en_US
  {"status":0,"main":null,"ex":"Error description not found."}
 ```
+
+## Download
+Use [the latest version successfully built by Actions](https://github.com/NT-AUTHORITY/getError/actions)  
+or [GitHub Releases](https://github.com/NT-AUTHORITY/getError/releases).  
+
+> [!TIP]
+> The `Actions` versions are built automatically every commit. Its usability is lower than the `Releases` versions.  
+> On the other hand, the `Actions` version is the newest public build, while the `Releases` version is published manually and may be outdated.
+> Select the version you want.
