@@ -1,0 +1,34 @@
+name: Build and Package getError
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore NuGet packages
+      run: dotnet restore getError.sln
+
+    - name: Build solution
+      run: dotnet build getError.sln --configuration Release --no-restore
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: getError
+        path: getError/bin/Release/
